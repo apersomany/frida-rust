@@ -60,6 +60,7 @@ fn main() {
         .header("event_sink.h")
         .header("invocation_listener.h")
         .header("probe_listener.h")
+        .clang_arg("-IC:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/ucrt")
         .parse_callbacks(Box::new(bindgen::CargoCallbacks))
         .generate_comments(false)
         .layout_tests(false)

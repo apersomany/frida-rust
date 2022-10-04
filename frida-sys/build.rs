@@ -51,6 +51,7 @@ fn main() {
 
     let bindings = bindings
         .header_contents("core.h", "#include \"frida-core.h\"")
+        .clang_arg("-IC:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/ucrt")
         .parse_callbacks(Box::new(bindgen::CargoCallbacks))
         .generate_comments(false)
         .layout_tests(false)
